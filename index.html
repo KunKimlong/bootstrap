@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap_link/bootstrap.min.css">
+    <script src="./Bootstrap_link/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        @media (max-width:992px){
+            .center{
+                align-items: center !important;
+            }
+        }
+
+        .carousel-indicators .active{
+          background-color: red !important;
+        }
+        .carousel-indicators [data-bs-target]{
+          background-color: black; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 z-3 w-100">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><h1>Logo</h1></a>
+              <button class="navbar-toggler btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" >
+                <i class="bi bi-justify-right"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav nav-pills ms-auto mb-2 mx-auto  mb-lg-0 center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#temple">Temple</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#food">Food</a>
+                  </li>
+                </ul>
+                <button class="btn btn-primary me-5" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</button>
+                <button class="btn btn-warning me-5" data-bs-toggle="modal" data-bs-target="#modalRegister">Register</button>
+                <form class="d-flex" >
+                  <input class="form-control me-2" type="search" placeholder="Search" >
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">Login Form</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <label for="">Username or Email:</label>
+              <input type="text" name="" id="" class="form-control my-2" placeholder="Username or Email:">
+              <label for="">Password:</label>
+              <input type="password" name="" id="" class="form-control my-2" placeholder="Password">
+
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center w-100" id="exampleModalLabel">Register Form</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <label for="">Username:</label>
+              <input type="text" name="" id="" class="form-control my-2" placeholder="Username:">
+              <label for="">Email: </label>
+              <input type="text" name="" id="" class="form-control my-2" placeholder="Email:">
+              <label for="">Password:</label>
+              <input type="password" name="" id="" class="form-control my-2" placeholder="Password:">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-warning">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container" style="margin-top: 100px;">
+        <div  class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" data-bs-spy="scroll">
+
+
+              <!-- temple -->
+            <h1 class="text-center text-decoration-underline">Temple</h1>
+            <div id="temple" class="carousel slide my-5" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#temple" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#temple" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#temple" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#temple" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../Image/angkorwat1.jpg" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>First slide label</h1>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../Image/temple2.webp" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>Second slide label</h1>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../Image/temple3.jpg" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>Third slide label</h1>
+                  </div>
+                </div>
+                <div class="carousel-item active">
+                  <img src="../Image/templ4.jpg" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>Fourth slide label</h1>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#temple" data-bs-slide="prev">
+                <h1>-</h1>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#temple" data-bs-slide="next">
+                <h1>+</h1>
+              </button>
+            </div>
+
+
+            <!-- food -->
+
+            <div id="food" class="carousel slide my-5" data-bs-ride="carousel">
+              <h1 class="text-center text-decoration-underline">Food</h1>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#food" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#food" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#food" style="width: 10px; height: 10px; border-radius: 50%; padding: 10px;" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../Image/burger.webp" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>First slide label</h1>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../Image/pizza.webp" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>Second slide label</h1>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="../Image/pizza2.webp" class="d-block w-100 object-fit-cover" height="600px" alt="...">
+                  <div class="carousel-caption d-none d-md-block top-50">
+                    <h1>Third slide label</h1>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#food" data-bs-slide="prev">
+                <h1>-</h1>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#food" data-bs-slide="next">
+                <h1>+</h1>
+              </button>
+            </div>
+
+        <!-- .... -->
+
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
